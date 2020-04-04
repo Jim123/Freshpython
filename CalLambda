@@ -1,0 +1,26 @@
+# Lamda  Function definition is here
+x= int(input( "Enter a number  "))
+y= int(input( "Enter a second number "))
+
+sum = lambda arg1, arg2: arg1 + arg2;
+# Now you can call sum as a function
+print ("Value of total : ", sum( x,y))
+print ("Value of total : ", sum( x,y ))
+
+diff = lambda arg1, arg2: arg1 - arg2;
+
+# Now you can call sum as a function
+print ("Value of total : ", diff( x,y ))
+print("Value of total : ", diff( x,y ))
+
+mul = lambda arg1, arg2: arg1 * arg2;
+
+# Now you can call sum as a function
+print ("Value of total : ", mul( x,y ))
+print("Value of total : ", mul( x,y))
+
+div = lambda arg1, arg2: arg1 / arg2;
+
+# Now you can call sum as a function
+print ("Value of total : ", div( x,y ))
+print("Value of total : ", div( x,y ))
