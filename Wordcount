@@ -1,0 +1,33 @@
+import random
+
+def word_guessing_game():
+    words = ["python", "coding", "programming", "computer", "software", "hardware"]
+    word = random.choice(words)
+
+    guesses_left = 6
+    guessed_letters = []
+
+    while guesses_left > 0:
+        print("\nGuess the word:")
+        for letters in words:
+            if letter in guessed_letters:
+                print(letter, end=" ")
+            else:
+                print("_", end=" ")
+        print("\n")
+
+        guess = input("Enter your guess: ").lower()
+
+        if guess in words:
+            guessed_letters.append(guess)
+            if set(guessed_letters) == set(word):
+                print(f"\nCongratulations! You guessed the word: {word}")
+                return
+        else:
+            guesses_left -= 1
+            print(f"Incorrect guess. {guesses_left} guesses remaining.")
+
+    print(f"\nYou've run out of guesses. The word was: {word}")
+
+if __name__ == "__main__":
+    word_guessing_game()
